@@ -1,21 +1,19 @@
 var taskInput = document.querySelector('.task');
 var taskList = [];
-var taskList = JSON.parse(localStorage.getItem('taskList'));
 var checkList = document.querySelector('.taskList');
 var add = document.querySelector('.add-btn');
 
 var checkBox = document.querySelector('.checkBox').innerHTML;
 var template =  Handlebars.compile(checkBox);
 
-checkList.innerHTML = template({list: JSON.parse(localStorage.getItem('taskList'))});
+checkList.innerHTML = template({list: taskList});
 
 add.addEventListener('click', function () {
     'use strict';
     var newTaskList = {task: taskInput.value};
     if (taskInput.value !== "") {
         taskList.push(newTaskList);
-        localStorage.setItem('taskList', JSON.stringify(taskList));
-        checkList.innerHTML = template({list: JSON.parse(localStorage.getItem('taskList'))});
+        checkList.innerHTML = template({list: taskList});
     }
     taskInput.value = "";
 });
