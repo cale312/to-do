@@ -1,5 +1,5 @@
 var taskInput = document.querySelector('.task');
-var taskList = JSON.parse(localStorage.getItem('taskList'));
+var taskList = [];
 var checkList = document.querySelector('.taskList');
 var add = document.querySelector('.add-btn');
 
