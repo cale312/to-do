@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+    
+    <link href="sytle.css" type="text/css" rel="stylesheet">
+    <script src="handlebars-v4.0.5.js"></script>
+    
+    <head>
+        <header>
+            <h1 class="header"><img src="images/checkboxList.png">To-DO</h1>
+        </header>
+    </head>
+    
+    <body>
+        <h2 class="list-header"></h2>
+        <input class="date" type="text" placeholder="dd/mmm/yyyy">
+        <br/>
+        <br/>
+        <input class="task" type="text" placeholder="enter task">
+        <br/>
+        <br/>
+        <button type="submit" class="add-btn" value="">ADD</button>
+        <br/>
+        <br/>
+        <div class="list">
+            <h6>&#9679;</h6>
+            <div class="taskList"></div>
+        </div>
+        
+    </body>
+    
+    <script class="checkBox" type="text/x-handlebars">
+        {{#each list}}
+            <input class="task" type="checkbox">{{task}}
+            <button class="delete" value="{{task}}">X</button>
+            <hr/>
+        {{/each}}
+        
+    </script>
+    <script src="app.js"></script>
+    
+</html>
