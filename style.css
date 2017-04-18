@@ -1,0 +1,130 @@
+body {
+    text-align: center;
+    margin: 0px;
+    background: url(images/checklist.jpg) no-repeat;
+    background-size: cover;
+}
+.login-screen, .registration-screen, .recovery {
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 30px 45px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px black;
+}
+.recovery, .login-btn-2, .to-do-list, .answer-text, .check-answer-btn  {display: none}
+.registration-screen {
+    display: none;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bolder;
+    font-family: verdana;
+    font-size: 1em;
+    color: whitesmoke;
+}
+h4 {
+    font-size: 1.4em;
+    color: whitesmoke;
+    text-shadow: 0px 0px 15px black;
+    background: rgba(0, 0, 0, 0.2);
+    letter-spacing: .3em;
+}
+p, h3 {
+    text-shadow: 0px 0px 5px white;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+td {text-align: left;}
+h6 {color: red;}
+.username, .password {text-align: center;}
+.add-user-btn, .login-btn, .register-new-user, .logout-btn, .forgot-btn, .search-btn, .back-btn, .login-btn-2, .back-btn-2, .check-answer-btn {
+    border: none;
+    font-size: 1em;
+    font-weight: bolder;
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px black;
+    color: white;
+}
+.logout-btn {
+    padding: 5px 20px;
+    color: black;
+    font-weight: bolder;
+}
+.back-btn, .back-btn-2 {
+    background: rgba(255, 0, 0, 0.3);
+    padding: 5px 20px;
+}
+.back-btn:hover, .back-btn-2:hover {background: rgba(255, 0, 0, 0.5);}
+.register-new-user {padding: 5px 30px;}
+.add-user-btn:hover, .login-btn:hover, .register-new-user:hover, .logout-btn:hover, .forgot-btn:hover, .search-btn:hover, .login-btn-2:hover, .check-answer-btn:hover {background: rgba(0, 0, 0, 0.2);}
+.header {
+    width: 80%;
+    padding: 10px 50px;
+    font-family: sans-serif;
+    font-size: 3.9em;
+    font-weight: bolder;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px;
+}
+.header img {width: 55px;}
+.taskInput, .dateInput {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: monospace;
+    border-radius: 10px;
+}
+.add-btn, .new-page-btn {
+    border: none;
+    padding: 5px 20px;
+    background: ghostwhite;
+    box-shadow: 0px 0px 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.add-btn:hover, .new-page-btn:hover {background: rgba(255, 255, 255, 0.9);}
+.list {
+    display: inline-block;
+    padding: 10px 80px;
+    border-radius: 10px;
+    background: url(images/body.jpg) no-repeat;
+    background-size: cover;
+    font-family: cursive;
+    font-size: 2em;
+    border: solid gray 2px;
+    width: 300px;
+	box-shadow: 0px 0px 5px;
+}
+.list-header {
+    background: rgba(0, 0, 0, 0.1);
+    text-shadow: 0px 0px 5px white;
+}
+h6 {
+    display: inline-block;
+    margin-top: -5px;
+    color: #444;
+}
+li {
+    margin: 10px;
+    color: rgba(0, 255, 0, 0.5);
+    font-weight: bolder;
+}
+li:hover {cursor: pointer; text-decoration: line-through;}
+footer {
+    text-shadow: 0px 0px 5px white;
+    margin-top: 90px;
+    font-family: cursive;
+    text-align: center;
+    clear: both;
+    background: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    padding: 10px 50px;
+}
+#logo {
+    border-radius: 2em;
+    box-shadow: 0px 0px 6px black;
+}
