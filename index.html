@@ -1,38 +1,156 @@
 <!Doctype html>
 <html>
-    
-    <link href="sytle.css" type="text/css" rel="stylesheet">    
+
+    <link href="style.css" type="text/css" rel="stylesheet">
+	<link href="images/checkboxList.png" rel="icon">
+    <script src="handlebars-v4.0.5.js"></script>
     <head>
         <header>
+            <title>To-Do List</title>
             <h1 class="header"><img src="images/checkboxList.png">To-DO</h1>
+            <br/><br/><br/><br/><br/><br/>
         </header>
+        <br/>
+        <br/>
     </head>
-    
+    <div  style="float: left; margin: 10px 0px 10px -2px; postion: fixed;"><img src="images/bart%20Peeking.png" width="80" align="center">&trade;</div>
     <body>
-        <h2 class="list-header"></h2>
-        <input class="dateInput" type="text" placeholder="DD/MMM/YYYY">
-        <br/>
-        <br/>
-        <input class="taskInput" type="text" placeholder="enter task">
-        <br/>
-        <br/>
-        <button type="submit" class="add-btn" value="">ADD</button>
-        <br/>
-        <br/>
-        <div class="list">
-            
-            <div class="taskList">
-                <h6>&#9679;</h6>
-                <hr/>        
-                <ol class="Tasklist">
-                    
-                </ol>
-                <hr/>
-            </div>
-            
+        <div class="login-screen">
+            <h4>login</h4>
+            <input class="username" type="text" placeholder="username">
+            <br/>
+            <br/>
+            <input class="password" type="password" placeholder="password">
+            <div class="error-msg" style="color: red; text-shadow: 0px 0px 5px black"></div>
+            <br/>
+            <input class="forgot-btn" type="button" value="forgot password">
+            <br/>
+            <br/>
+            <input class="login-btn" type="button" value="login">
+            <input class="add-user-btn" type="button" value="register">
         </div>
-        
+        <div class="recovery">
+            <h4>password<br/>recovery</h4>
+            <div class="alert-msg"></div>
+            <div class="recovery-help">
+                <p>Please enter your email address</p>
+                <input class="recovery-email" type="text">
+                <input class="search-btn" type="button" value="search">
+                <br/>
+                <div  class="recovery-error" style="color: red; text-shadow: 0px 0px 5px black"></div>
+                <br/>
+                <br/>
+                <button class="back-btn" value="back">&larr; back</button>
+            </div>
+            <br/>
+            <br/>
+            <div class="security-question"></div>
+            <input class="answer-text" type="text" placeholder="answer">
+            <input class="check-answer-btn" type="button" value="check">
+            <div class="answer-error" style="color: red; text-shadow: 0px 0px 5px black"></div>
+            <div class="your-password" style="text-shadow: 0px 0px 5px white"></div>
+			<br/>
+            <input class="login-btn-2" type="button" value="login">
+            <script class="password-display" type="text/x-handlebars">
+                <p>Your password is : "{{password}}"</p>
+            </script>
+            <script class="security-template" type="text/x-handlebars">
+                <h3>{{security}}</h3>
+                <br/>
+            </script>
+            <script class="recovery-template" type="text/x-handlebars">
+                <p>Hello, {{name}}, it seems you have forgotten your password.<br/> Please answer this security question to recover it.</p>
+            </script>
+        </div>
+        <div class="registration-screen">
+            <h4>Register</h4>
+            <form>
+            <table>
+                <tr>
+                    <td>Full name (s)</td>
+                    <td><input class="firstName" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Second name</td>
+                    <td><input class="secondName" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email address *</td>
+                    <td><input class="email" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Choose username *</td>
+                    <td><input class="newUser" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Enter password *</td>
+                    <td><input class="newPassword" type="password"></td>
+                </tr>
+				<tr>
+					<td>Confirm password *</td>
+					<td><input class="newPasswordConfirm" type="password"></td>
+				</tr>
+                <tr>
+                    <td>Please enter security question *</td>
+                    <td><input class="securityQ" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Please enter answer *</td>
+                    <td><input class="securityA" type="text"></td>
+                </tr>
+            </table>
+            <div class="success-msg" style="color: green; text-shadown: 0px 0px 5px white;"></div>
+            <br/>
+            <input class="register-new-user" type="button" value="submit">
+            </form>
+            <br/>
+            <br/>
+            <button class="back-btn-2" value="back">&larr; back</button>
+        </div>
+        <div class="to-do-list">
+            <script class="template" type="text/x-handlebars">
+                <h2 class="list-header">Hello {{name}},<br/> What tasks do we have for the day...</h2>
+            </script>
+            <div class="list-header"></div>
+            <br/>
+            <br/>
+            <input class="logout-btn" type="button" value="logout">
+            <br/>
+            <br/>
+            <input class="dateInput" type="text" placeholder="DD/MMM/YYYY">
+            <br/>
+            <br/>
+            <input class="taskInput" type="text" placeholder="enter task">
+            <br/>
+            <br/>
+            <button type="submit" class="add-btn" value="">ADD</button>
+            <input type="submit" class="new-page-btn" value="clear-page">
+            <br/>
+            <br/>
+            <div class="list">
+                
+                <div class="taskList">
+                    <h6>&#9679;</h6>
+                    <hr/>
+                    <ol class="Tasklist">
+                        
+                    </ol>
+                    <hr/>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="app.js"></script>
-    
+    <br/>
+    <footer>
+        <div class="footer-content">
+            &copy; codeX 2017<br/>site By: Zikisa Cale Sogaxa<br/><a href="https://www.facebook.com/caleArts/" target="_blank"><img id="logo" src="images/logo.jpg" title="caleOasin" width="50" height="50"></a>
+            <br/>
+            <a class="instagram-icon" href="https://www.instagram.com/sogaxa_zikisa/" target="_blank"><img src = "images/Instagram-PNG-File.png" width="40" title="@zikisa_sogaxa" height="40"/></a>
+            <a href="https://www.facebook.com/sogaxacale" target="_blank"><img src="images/Facebook-Transparent.png" title="zikisa cale sogaxa" width="40" height="40"/></a>
+            <a href="https://www.linkedin.com/in/zikisacalesogaxa/" target="_blank"><img src="images/Linkedin.png" title="zikisa cale sogaxa" width="40" height="40"></a>
+        </div>
+    </footer>
+	<h6>&copy; This site is the property of zikisa cale sogaxa, any unathorized usage of any elements potrayed in this site, zikisa cale sogaxa has the right to envoke legal action against the person envolved.<br/>Right of admission reserved. &copy;caleArts&trade;<h6>
+
 </html>
